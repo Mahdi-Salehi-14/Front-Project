@@ -20,22 +20,22 @@
     </head>
     <body>
         <h1>تماس با ما</h1>
-        <form>
+        <form action="Contact.php" method="post">
             <label for="title">عنوان:</label>
             <br>
-            <input type="text" id="title">
+            <input type="text" id="title" name="title">
             <br>
             <label for="email">آدرس ایمیل شما:</label>
             <br>
-            <input type="email" id="email" placeholder="ABC@Gmail.com">
+            <input type="email" id="email" name="email" placeholder="ABC@Gmail.com">
             <br>
             <label for="number">شماره موبایل شما:</label>
             <br>
-            <input type="number" id="number" placeholder="09123456789">
+            <input type="number" id="number" name="number" placeholder="09123456789">
             <br>
             <label for="textarea">متن پیام:</label>
             <br>
-            <textarea id="textarea"></textarea>
+            <textarea id="textarea" name="textarea"></textarea>
             <br>
             <input type="submit" value="ارسال">
         </form>
