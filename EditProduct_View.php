@@ -1,3 +1,6 @@
+<?php
+    $uid = $_GET['id'];
+?>
 <!doctype html>
 <html lang="fa">
     <head>
@@ -12,11 +15,7 @@
     </head>
     <body>
         <h1>ویرایش اطلاعات محصول</h1>
-        <form action="" method="post">
-            <label for="productcode">کد محصول مورد نظر :</label>
-            <br>
-            <input type="number" id="productcode" name="productcode">
-            <br>
+        <form action="EditProduct.php?id=<?php echo $uid;?>" method="post">
             <label for="producttitle">عنوان جدید محصول :</label>
             <br>
             <input type="text" id="producttitle" name="producttitle">
@@ -28,6 +27,10 @@
             <label for="productdescription">توضیحات جدید محصول :</label>
             <br>
             <textarea id="productdescription" name="productdescription"></textarea>
+            <br>
+            <label for="productcode">کد جدید محصول :</label>
+            <br>
+            <input type="number" id="productcode" name="productcode">
             <br>
             <label>دسته محصول :</label>
             <br>
@@ -51,7 +54,9 @@
             <br>
             <input type="number" id="productprice" name="productprice">
             <br>
-            <label>(بخش دریافت عکس محصول بعدا تکمیل می شود)</label>
+            <label>عکس جدید محصول :</label>
+            <br>
+            <input type="file" id="productimg" name="productimg">
             <br>
             <button type="submit">ویرایش اطلاعات محصول</button>
         </form>

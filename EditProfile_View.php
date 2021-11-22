@@ -1,3 +1,6 @@
+<?php
+    $uid = $_GET['id'];
+?>
 <!doctype html>
 <html lang="fa">
     <head>
@@ -12,7 +15,7 @@
     </head>
     <body>
         <h1>اطلاعات خود را ویرایش کنید</h1>
-        <form action="p" method="post">
+        <form action="EditProfile.php?id=<?php echo $uid;?>" method="post">
             <label for="firstname">نام :</label>
             <br>
             <input type="text" id="firstname" name="firstname">
@@ -20,6 +23,11 @@
             <label for="lastname">فامیل :</label>
             <br>
             <input type="text" id="lastname" name="lastname">
+            <br>
+            <label for="malegender">مذکر</label>
+            <input type="radio" name="gender" value="male" checked id="malegender">
+            <label for="femalegender">مونث</label>
+            <input type="radio" name="gender" value="female" checked id="femalegender">
             <br>
             <label for="kodmeli">کد ملی :</label>
             <br>
@@ -32,10 +40,6 @@
             <label for="number">شماره موبایل :</label>
             <br>
             <input type="number" id="number" name="number" placeholder="09123456789">
-            <br>
-            <label for="password">کلمه عبور قبلی :</label>
-            <br>
-            <input type="password" id="password" name="password">
             <br>
             <label for="password">کلمه عبور جدید :</label>
             <br>
