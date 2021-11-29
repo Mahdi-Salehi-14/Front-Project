@@ -1,6 +1,3 @@
-<?php
-    $uid = $_GET['id'];
-?>
 <!doctype html>
 <html lang="fa">
     <head>
@@ -15,48 +12,48 @@
     </head>
     <body>
         <h1>ویرایش اطلاعات محصول</h1>
-        <form action="EditProduct.php?id=<?php echo $uid;?>" method="post">
+        <form action="" method="post">
             <label for="producttitle">عنوان جدید محصول :</label>
             <br>
-            <input type="text" id="producttitle" name="producttitle">
+            <input type="text" id="producttitle" name="producttitle" value = "<?php echo $producttitle; ?>">
             <br>
             <label for="productname">نام جدید محصول :</label>
             <br>
-            <input type="text" id="productname" name="productname">
+            <input type="text" id="productname" name="productname" value = "<?php echo $productname; ?>">
             <br>
             <label for="productdescription">توضیحات جدید محصول :</label>
             <br>
-            <textarea id="productdescription" name="productdescription"></textarea>
+            <textarea id="productdescription" name="productdescription"><?php echo $productdescription; ?></textarea>
             <br>
             <label for="productcode">کد جدید محصول :</label>
             <br>
-            <input type="number" id="productcode" name="productcode">
+            <input type="number" id="productcode" name="productcode" value = "<?php echo $productcode; ?>">
             <br>
             <label>دسته محصول :</label>
             <br>
             <select name = "category">
-				<option value = "sportshoes">کفش ورزشی</option>
-				<option value = "sportsequipment">وسیله ورزشی</option>
-				<option value = "womensportswear">لباس ورزشی زنانه</option>
-                <option value = "mensportswear">لباس ورزشی مردانه</option>
+				<option value = "sportshoes" <?php if($category == 'sportshoes') {echo 'selected';} ?>>کفش ورزشی</option>
+				<option value = "sportsequipment" <?php if($category == 'sportsequipment') {echo 'selected';} ?>>وسیله ورزشی</option>
+				<option value = "womensportswear" <?php if($category == 'womensportswear') {echo 'selected';} ?>>لباس ورزشی زنانه</option>
+                <option value = "mensportswear" <?php if($category == 'mensportswear') {echo 'selected';} ?>>لباس ورزشی مردانه</option>
 			</select>
             <br>
             <label>برند محصول :</label>
             <br>
             <select name = "brand">
-				<option value = "adidas">Adidas</option>
-				<option value = "nike">Nike</option>
-				<option value = "reebok">Reebok</option>
-                <option value = "underarmour">Under Armour</option>
+				<option value = "adidas" <?php if($brand == 'adidas') {echo 'selected';} ?>>Adidas</option>
+				<option value = "nike" <?php if($brand == 'nike') {echo 'selected';} ?>>Nike</option>
+				<option value = "reebok" <?php if($brand == 'reebok') {echo 'selected';} ?>>Reebok</option>
+                <option value = "underarmour" <?php if($brand == 'underarmour') {echo 'selected';} ?>>Under Armour</option>
 			</select>
             <br>
             <label for="productprice">قیمت جدید محصول (قیمت ها به ریال وارد شوند) :</label>
             <br>
-            <input type="number" id="productprice" name="productprice">
+            <input type="number" id="productprice" name="productprice" value = "<?php echo $productprice; ?>">
             <br>
             <label>عکس جدید محصول :</label>
             <br>
-            <input type="file" id="productimg" name="productimg">
+            <input type="file" id="productimg" name="productimg" value = "<?php echo $productimg; ?>">
             <br>
             <button type="submit">ویرایش اطلاعات محصول</button>
         </form>

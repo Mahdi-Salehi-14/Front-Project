@@ -1,6 +1,3 @@
-<?php
-    $uid = $_GET['id'];
-?>
 <!doctype html>
 <html lang="fa">
     <head>
@@ -15,37 +12,37 @@
     </head>
     <body>
         <h1>اطلاعات خود را ویرایش کنید</h1>
-        <form action="EditProfile.php?id=<?php echo $uid;?>" method="post">
+        <form action = "" method="post">
             <label for="firstname">نام :</label>
             <br>
-            <input type="text" id="firstname" name="firstname">
+            <input type="text" id="firstname" name="firstname" value = "<?php echo $firstname; ?>">
             <br>
             <label for="lastname">فامیل :</label>
             <br>
-            <input type="text" id="lastname" name="lastname">
+            <input type="text" id="lastname" name="lastname" value = "<?php echo $lastname; ?>">
             <br>
             <label for="malegender">مذکر</label>
-            <input type="radio" name="gender" value="male" checked id="malegender">
+            <input type="radio" name="gender" value="male" id="malegender" <?php if($gender == 'male') {echo 'checked';} ?>>
             <label for="femalegender">مونث</label>
-            <input type="radio" name="gender" value="female" checked id="femalegender">
+            <input type="radio" name="gender" value="female" id="femalegender" <?php if($gender == 'female') {echo 'checked';} ?>>
             <br>
             <label for="kodmeli">کد ملی :</label>
             <br>
-            <input type="number" id="kodmeli" name="kodmeli" placeholder="1234567890">
+            <input type="number" id="number" name="kodmeli" placeholder="1234567890" value = "<?php echo $kodmeli; ?>">
             <br>
             <label for="email">آدرس ایمیل :</label>
             <br>
-            <input type="email" id="email" name="email" placeholder="ABC@Gmail.com">
+            <input type="email" id="email" name="email" placeholder="ABC@Gmail.com" value = "<?php echo $email; ?>">
             <br>
             <label for="number">شماره موبایل :</label>
             <br>
-            <input type="number" id="number" name="number" placeholder="09123456789">
+            <input type="number" id="number" name="number" placeholder="09123456789" value = "<?php echo $number; ?>">
             <br>
             <label for="password">کلمه عبور جدید :</label>
             <br>
-            <input type="password" id="password" name="password">
+            <input type="password" id="password" name="password" value = "<?php echo $password; ?>">
             <br>
-            <button type="submit">ذخیره اطلاعات</button>
+            <button type="submit" name="submit">ذخیره اطلاعات</button>
         </form>
     </body>
 </html>

@@ -6,3 +6,23 @@ button{
     border-radius: 2em;
     text-align: center;
 }
+.card{
+    background-color: #E7E0EC;
+    border-radius: 12px;
+    overflow: hidden;
+}
+card-body{
+    padding: 16px;
+}
+img{
+    max-width: 100%;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 8px;
+}
+.swiper {
+    width: 1320px;
+    height: 400px;
+  }
