@@ -22,6 +22,17 @@ img{
     grid-template-columns: auto auto auto auto;
     grid-gap: 8px;
 }
+.body-grid{
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-gap: 8px;
+}
+header, footer, aside, main{
+    background-color: #d6c1e6;
+}
+.body-grid > header, .body-grid > footer{
+    grid-column: 1/3;
+}
 .swiper {
     width: 1320px;
     height: 400px;
