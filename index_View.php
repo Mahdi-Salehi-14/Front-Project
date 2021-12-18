@@ -11,37 +11,41 @@
             }
         </style>
     </head>
-    <body>
-        <h1>فروشگاه چیتا اسپورت</h1>
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src = "Images\banner1.jpg"></div>
-                <div class="swiper-slide"><img src = "Images\banner2.jpg"></div>
-                <div class="swiper-slide"><img src = "Images\banner3.jpg"></div>
+    <body class = "body-grid-no-aside">
+        <?php include 'Header.html'; ?>
+        <main>
+            <h1>فروشگاه چیتا اسپورت</h1>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src = "Images\banner1.jpg"></div>
+                    <div class="swiper-slide"><img src = "Images\banner2.jpg"></div>
+                    <div class="swiper-slide"><img src = "Images\banner3.jpg"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-scrollbar"></div>
-        </div>
-        <h2>ارزان ترین محصولات</h2>
-        <div class = "grid-container">
-            <?php
-                foreach($productlistcheapest as $product)
-                    {
-                        echo "
-                            <article class = 'card'>
-                                <img src = '{$product['productimg']}'>
-                                <br>
-                                <div class = 'card-body'>
-                                    <h3><a href = 'ProductDetails.php?id={$product['id']}'>{$product['productname']}</a></h3>
-                                    <p>قیمت :{$product['productprice']}</p>
-                                </div>
-                            </article>
-                        ";
-                    }
-            ?>
-        </div>
+            <h2>ارزان ترین محصولات</h2>
+            <div class = "grid-container">
+                <?php
+                    foreach($productlistcheapest as $product)
+                        {
+                            echo "
+                                <article class = 'card'>
+                                    <img src = '{$product['productimg']}'>
+                                    <br>
+                                    <div class = 'card-body'>
+                                        <h3><a href = 'ProductDetails.php?id={$product['id']}'>{$product['productname']}</a></h3>
+                                        <p>قیمت :{$product['productprice']}</p>
+                                    </div>
+                                </article>
+                            ";
+                        }
+                ?>
+            </div>
+        </main>
+        <?php include 'Footer.html'; ?>
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <script src="Main.js"></script>
     </body>

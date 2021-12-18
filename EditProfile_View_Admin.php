@@ -10,10 +10,11 @@
             }
         </style>
     </head>
-    <body class = "body-grid-no-aside">
+    <body class = "body-grid">
         <?php include 'Header.html'; ?>
+        <?php include 'AsideNav.html'; ?>
         <main>
-            <h1>اطلاعات خود را ویرایش کنید</h1>
+            <h1>اطلاعات کاربر را ویرایش کنید</h1>
             <form action = "" method="post">
                 <label for="firstname">نام :</label>
                 <br>
