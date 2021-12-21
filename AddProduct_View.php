@@ -11,11 +11,11 @@
         </style>
     </head>
     <body class = "body-grid">
-        <?php include 'Header.html'; ?>
-        <?php include 'AsideNav.html'; ?>
+        <?php include 'Header.php'; ?>
+        <?php include 'AsideNav.php'; ?>
         <main>
             <h1>ورود اطلاعات محصول جدید</h1>
-            <form action="AddProduct.php" method="post">
+            <form action="" method="post">
                 <label for="producttitle">عنوان محصول :</label>
                 <br>
                 <input type="text" id="producttitle" name="producttitle">
@@ -58,9 +58,9 @@
                 <br>
                 <input type="file" id="productimg" name="productimg">
                 <br>
-                <button type="submit">ثبت محصول</button>
+                <button type="submit" name="submit">ثبت محصول</button>
             </form>
         </main>
-        <?php include 'Footer.html'; ?>
+        <?php include 'Footer.php'; ?>
     </body>
 </html>

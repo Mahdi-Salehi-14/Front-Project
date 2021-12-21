@@ -11,8 +11,8 @@
         </style>
     </head>
     <body class = "body-grid">
-        <?php include 'Header.html'; ?>
-        <?php include 'AsideNav.html'; ?>
+        <?php include 'Header.php'; ?>
+        <?php include 'AsideNav.php'; ?>
         <main>
             <h1>جدول پیام های کاربران</h1>
             <div class="div-datatable">
@@ -68,6 +68,6 @@
                 </table>
             </div>
         </main>
-        <?php include 'Footer.html'; ?>
+        <?php include 'Footer.php'; ?>
     </body>
 </html>

@@ -12,7 +12,7 @@
         </style>
     </head>
     <body class = "body-grid-no-aside">
-        <?php include 'Header.html'; ?>
+        <?php include 'Header.php'; ?>
         <main>
             <h1>فروشگاه چیتا اسپورت</h1>
             <div class="swiper">
@@ -33,10 +33,12 @@
                         {
                             echo "
                                 <article class = 'card'>
-                                    <img src = '{$product['productimg']}'>
+                                    <a href = 'ViewProduct.php?id={$product['id']}'>
+                                        <img src = '{$product['productimg']}'>
+                                    </a>
                                     <br>
                                     <div class = 'card-body'>
-                                        <h3><a href = 'ProductDetails.php?id={$product['id']}'>{$product['productname']}</a></h3>
+                                        <h3><a href = 'ViewProduct.php?id={$product['id']}'>{$product['productname']}</a></h3>
                                         <p>قیمت :{$product['productprice']}</p>
                                     </div>
                                 </article>
@@ -45,7 +47,7 @@
                 ?>
             </div>
         </main>
-        <?php include 'Footer.html'; ?>
+        <?php include 'Footer.php'; ?>
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <script src="Main.js"></script>
     </body>

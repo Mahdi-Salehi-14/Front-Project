@@ -1,9 +1,19 @@
 <?php
+    session_start();
     include 'DataBase.php';
     include 'Settings.php';
+    include 'Security.php';
     $pid = $_GET['id'];
     $db = new db($dbhost, $dbuser, $dbpass, $dbname);
-    if(isset($_POST['submit']))
+    $sql = "SELECT * FROM user WHERE id = ?";
+    $result = $db -> query($sql, $_SESSION['uid']);
+    $user = $result -> fetchArray();
+    if($user['role'] != 'adminuser'){
+        header('Location: 403.php');
+        exit;
+    }
+    else{
+        if(isset($_POST['submit']))
         {
             $sql = "UPDATE product SET
                     producttitle = ?,
@@ -16,7 +26,8 @@
                     productimg = ?
                     WHERE id = {$pid}";
             $result = $db -> query($sql, $_POST['producttitle'], $_POST['productname'], $_POST['productdescription'], $_POST['productcode'], $_POST['category'], $_POST['brand'], $_POST['productprice'], $_POST['productimg']);
-            echo 'Edited Successfully';
+            header('Location: Product_DataTable.php');
+            exit;
         }
     else
         {
@@ -34,4 +45,5 @@
             include 'EditProduct_View.php';
         }
     $db -> close();
+    }
 ?>

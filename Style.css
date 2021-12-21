@@ -6,6 +6,9 @@
 	margin: 0;
 	padding: 0;
 }
+:lang(fa){
+    direction: rtl;
+    }
 button{
     min-width: 64px;
     height: 40px;
@@ -149,6 +152,8 @@ nav a{
     display: inline-block;
     vertical-align: middle;
     text-align: center;
+    color: black;
+    text-decoration: none;
 }
 .header-nav a:enabled{
     background-color: #FFFBFE;
@@ -170,4 +175,7 @@ nav a{
     background-color: rgba(73, 69, 78, 0.20);
     border: none;
     border-width: 0;
+}
+.eror403{
+    text-align: center;
 }

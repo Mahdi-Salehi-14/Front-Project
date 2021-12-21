@@ -4,14 +4,9 @@
         <title>ورود</title>
         <meta charset="utf-8">
         <link rel = "stylesheet" href = "Style.css">
-        <style>
-            :lang(fa){
-            direction: rtl;
-            }
-        </style>
     </head>
     <body class = "body-grid-no-aside">
-        <?php include 'Header.html'; ?>
+        <?php include 'Header.php'; ?>
         <main>
             <h1>وارد حساب کاربری خود شوید</h1>
             <form action="" method="post">
@@ -23,10 +18,10 @@
                 <br>
                 <input type="password" id="password" name="password">
                 <br>
-                <button type="submit">ورود به حساب</button>
+                <button type="submit" name = "submit">ورود به حساب</button>
             </form>
-            <a href="Register_View.php">هنوز حساب ندارید؟ یکی ایجاد کنید</a>
+            <a href="Register.php">هنوز حساب ندارید؟ یکی ایجاد کنید</a>
         </main>
-        <?php include 'Footer.html'; ?>
+        <?php include 'Footer.php'; ?>
     </body>
 </html>

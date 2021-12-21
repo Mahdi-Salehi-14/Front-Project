@@ -11,10 +11,10 @@
         </style>
     </head>
     <body class = "body-grid-no-aside">
-        <?php include 'Header.html'; ?>
+        <?php include 'Header.php'; ?>
         <main>
             <h1>تماس با ما</h1>
-            <form action="Contact.php" method="post">
+            <form action="" method="post">
                 <label for="title">عنوان:</label>
                 <br>
                 <input type="text" id="title" name="title">
@@ -31,9 +31,9 @@
                 <br>
                 <textarea id="textarea" name="textarea"></textarea>
                 <br>
-                <button type="submit">ارسال</button>
+                <button type="submit" name="submit">ارسال</button>
             </form>
         </main>
-        <?php include 'Footer.html'; ?>
+        <?php include 'Footer.php'; ?>
     </body>
 </html>

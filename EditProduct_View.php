@@ -11,8 +11,8 @@
         </style>
     </head>
     <body class = "body-grid">
-        <?php include 'Header.html'; ?>
-        <?php include 'AsideNav.html'; ?>
+        <?php include 'Header.php'; ?>
+        <?php include 'AsideNav.php'; ?>
         <main>
             <h1>ویرایش اطلاعات محصول</h1>
             <form action="" method="post">
@@ -58,9 +58,9 @@
                 <br>
                 <input type="file" id="productimg" name="productimg" value = "<?php echo $productimg; ?>">
                 <br>
-                <button type="submit">ویرایش اطلاعات محصول</button>
+                <button type="submit" name="submit">ویرایش اطلاعات محصول</button>
             </form>
         </main>
-        <?php include 'Footer.html'; ?>
+        <?php include 'Footer.php'; ?>
     </body>
 </html>

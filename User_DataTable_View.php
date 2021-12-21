@@ -11,8 +11,8 @@
         </style>
     </head>
     <body class = "body-grid">
-        <?php include 'Header.html'; ?>
-        <?php include 'AsideNav.html'; ?>
+        <?php include 'Header.php'; ?>
+        <?php include 'AsideNav.php'; ?>
         <main>
             <h1>جدول اطلاعات کاربران</h1>
             <div class="div-datatable">
@@ -28,7 +28,7 @@
                             نام خانوادگی
                         </th>
                         <th>
-                            جنسیت
+                            وضعیت
                         </th>
                         <th>
                             ایمیل
@@ -55,7 +55,7 @@
                                             {$user['lastname']}
                                         </td>
                                         <td>
-                                            {$user['gender']}
+                                            {$user['role']}
                                         </td>
                                         <td>
                                             {$user['email']}
@@ -75,6 +75,6 @@
                 </table>
             </div>
         </main>
-        <?php include 'Footer.html'; ?>
+        <?php include 'Footer.php'; ?>
     </body>
 </html>

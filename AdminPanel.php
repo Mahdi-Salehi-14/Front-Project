@@ -1,21 +1,17 @@
-<!doctype html>
-<html lang = "fa">
-    <head>
-        <title>داشبورد</title>
-        <meta charset = "utf-8">
-        <link rel = "stylesheet" href = "Style.css" type = "text/css">
-        <style>
-            :lang(fa){
-            direction: rtl;
-            }
-        </style>
-    </head>
-    <body class = "body-grid">
-        <?php include 'Header.html'; ?>
-        <?php include 'AsideNav.html'; ?>
-        <main>
-            <h1>پنل داشبورد</h1>
-        </main>
-        <?php include 'Footer.html'; ?>
-    </body>
-</html>
+<?php
+session_start();
+include 'DataBase.php';
+include 'Settings.php';
+include 'Security.php';
+$db = new db($dbhost, $dbuser, $dbpass, $dbname);
+$sql = "SELECT * FROM user WHERE id = ?";
+$result = $db -> query($sql, $_SESSION['uid']);
+$user = $result -> fetchArray();
+if($user['role'] != 'adminuser'){
+    header('Location: 403.php');
+    exit;
+}
+else{
+    include 'AdminPanel_View.php';
+}
+?>

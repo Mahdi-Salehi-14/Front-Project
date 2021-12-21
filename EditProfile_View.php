@@ -11,7 +11,7 @@
         </style>
     </head>
     <body class = "body-grid-no-aside">
-        <?php include 'Header.html'; ?>
+        <?php include 'Header.php'; ?>
         <main>
             <h1>اطلاعات خود را ویرایش کنید</h1>
             <form action = "" method="post">
@@ -47,6 +47,6 @@
                 <button type="submit" name="submit">ذخیره اطلاعات</button>
             </form>
         </main>
-        <?php include 'Footer.html'; ?>
+        <?php include 'Footer.php'; ?>
     </body>
 </html>

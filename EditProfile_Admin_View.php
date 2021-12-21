@@ -11,8 +11,8 @@
         </style>
     </head>
     <body class = "body-grid">
-        <?php include 'Header.html'; ?>
-        <?php include 'AsideNav.html'; ?>
+        <?php include 'Header.php'; ?>
+        <?php include 'AsideNav.php'; ?>
         <main>
             <h1>اطلاعات کاربر را ویرایش کنید</h1>
             <form action = "" method="post">
@@ -45,9 +45,18 @@
                 <br>
                 <input type="password" id="password" name="password" value = "<?php echo $password; ?>">
                 <br>
+                <label>تعیین نوع کاربر :</label>
+                <br>
+                <label for="adminuser">کاربر ادمین</label>
+                <input type="radio" name="role" value="adminuser" id="adminuser" <?php if($role == 'adminuser') {echo 'checked';} ?>>
+                <label for="normaluser">کاربر عادی</label>
+                <input type="radio" name="role" value="normaluser" id="normaluser" <?php if($role == 'normaluser') {echo 'checked';} ?>>
+                <label for="blockuser">کاربر مسدود</label>
+                <input type="radio" name="role" value="blockuser" id="blockuser" <?php if($role == 'blockuser') {echo 'checked';} ?>>
+                <br>
                 <button type="submit" name="submit">ذخیره اطلاعات</button>
             </form>
         </main>
-        <?php include 'Footer.html'; ?>
+        <?php include 'Footer.php'; ?>
     </body>
 </html>

@@ -11,11 +11,11 @@
         </style>
     </head>
     <body class = "body-grid-no-aside">
-        <?php include 'Header.html'; ?>
+        <?php include 'Header.php'; ?>
         <main>
             <h1>ثبت نام کاربر جدید</h1>
             حساب کاربری دارید؟ <a href="Login_View.php">به جای آن، وارد شوید!</a>
-            <form action="Register.php" method="post">
+            <form action="" method="post">
                 <label for="firstname">نام :</label>
                 <br>
                 <input type="text" id="firstname" name="firstname">
@@ -45,9 +45,10 @@
                 <br>
                 <input type="password" id="password" name="password">
                 <br>
-                <button type="submit">ثبت نام</button>
+                <input type="hidden" id="role" name="role" value="normaluser">
+                <button type="submit" name="submit">ثبت نام</button>
             </form>
         </main>
-        <?php include 'Footer.html'; ?>
+        <?php include 'Footer.php'; ?>
     </body>
 </html>

@@ -1,6 +1,8 @@
 <?php
     include 'DataBase.php';
     include 'Settings.php';
+    include 'Security.php';
+    session_start();
     $uid = $_GET['id'];
     $db = new db($dbhost, $dbuser, $dbpass, $dbname);
     if(isset($_POST['submit']))
@@ -15,7 +17,8 @@
                     password = ?
                     WHERE id = {$uid}";
                     $result = $db -> query($sql, $_POST['firstname'], $_POST['lastname'], $_POST['gender'], $_POST['kodmeli'], $_POST['email'], $_POST['number'], $_POST['password']);
-                    echo 'Edited Successfully';
+                    header('Location: ViewProfile.php');
+                    exit;
         }
     else
         {
