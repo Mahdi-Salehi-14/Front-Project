@@ -9,6 +9,7 @@
             direction: rtl;
             }
         </style>
+        <script src="https://kit.fontawesome.com/766647deb5.js" crossorigin="anonymous"></script>
     </head>
     <body class = "body-grid">
         <?php include 'Header.php'; ?>
@@ -64,9 +65,9 @@
                                             {$user['number']}
                                         </td>
                                         <td>
-                                        <a href = 'EditProfile_Admin.php?id={$user['id']}'>Edit</a>
-                                        <a href = 'RemoveUser.php?id={$user['id']}'>Remove</a>
-                                        <a href = 'ViewProfile.php?id={$user['id']}'>View</a>
+                                        <a href = 'EditProfile_Admin.php?id={$user['id']}' class='iconlink'><i class='far fa-edit'></i></a>
+                                        <a href = 'RemoveUser.php?id={$user['id']}' class='iconlink'><i class='far fa-trash-alt'></i></a>
+                                        <a href = 'ViewProfile.php?id={$user['id']}' class='iconlink'><i class='far fa-eye'></i></a>
                                         </td>
                                     </tr>
                                 ";

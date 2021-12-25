@@ -9,6 +9,7 @@
             direction: rtl;
             }
         </style>
+        <script src="https://kit.fontawesome.com/766647deb5.js" crossorigin="anonymous"></script>
     </head>
     <body class = "body-grid">
         <?php include 'Header.php'; ?>
@@ -58,9 +59,9 @@
                                             {$product['productprice']}
                                         </td>
                                         <td>
-                                        <a href = 'EditProduct.php?id={$product['id']}'>Edit</a>
-                                        <a href = 'RemoveProduct.php?id={$product['id']}'>Remove</a>
-                                        <a href = 'ViewProduct.php?id={$product['id']}'>View</a>
+                                        <a href = 'EditProduct.php?id={$product['id']}' class='iconlink'><i class='far fa-edit'></i></a>
+                                        <a href = 'RemoveProduct.php?id={$product['id']}' class='iconlink'><i class='far fa-trash-alt'></i></a>
+                                        <a href = 'ViewProduct.php?id={$product['id']}' class='iconlink'><i class='far fa-eye'></i></a>
                                         </td>
                                     </tr>
                                 ";

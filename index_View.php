@@ -10,6 +10,7 @@
             direction: rtl;
             }
         </style>
+        <script src="https://kit.fontawesome.com/766647deb5.js" crossorigin="anonymous"></script>
     </head>
     <body class = "body-grid-no-aside">
         <?php include 'Header.php'; ?>
@@ -32,16 +33,24 @@
                     foreach($productlistcheapest as $product)
                         {
                             echo "
-                                <article class = 'card'>
-                                    <a href = 'ViewProduct.php?id={$product['id']}'>
-                                        <img src = '{$product['productimg']}'>
-                                    </a>
-                                    <br>
-                                    <div class = 'card-body'>
-                                        <h3><a href = 'ViewProduct.php?id={$product['id']}'>{$product['productname']}</a></h3>
-                                        <p>قیمت :{$product['productprice']}</p>
+                            <article class = 'card'>
+                                <a href = 'ViewProduct.php?id={$product['id']}'>
+                                    <img src = '{$product['productimg']}'>
+                                </a>
+                                <br>
+                                <div class = 'card-body'>
+                                    <h3><a href = 'ViewProduct.php?id={$product['id']}'>{$product['productname']}</a></h3>
+                                    <p>قیمت :{$product['productprice']}</p>
+                                    <div class='cardbottomlink'>
+                                        <a href='LikeProduct.php?id={$product['id']}' class='card-iconlink'>
+                                            <i class='far fa-heart'></i>
+                                        </a>
+                                        <a href='BookmarkProduct.php?id={$product['id']}' class='card-iconlink'>
+                                            <i class='far fa-bookmark'></i>
+                                        </a>
                                     </div>
-                                </article>
+                                </div>
+                            </article>
                             ";
                         }
                 ?>
@@ -50,5 +59,6 @@
         <?php include 'Footer.php'; ?>
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <script src="Main.js"></script>
+        <script src="Card.js"></script>
     </body>
 </html>

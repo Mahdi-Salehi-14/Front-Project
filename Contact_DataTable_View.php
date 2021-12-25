@@ -9,6 +9,7 @@
             direction: rtl;
             }
         </style>
+        <script src="https://kit.fontawesome.com/766647deb5.js" crossorigin="anonymous"></script>
     </head>
     <body class = "body-grid">
         <?php include 'Header.php'; ?>
@@ -58,8 +59,8 @@
                                             {$message['textarea']}
                                         </td>
                                         <td>
-                                        <a href = 'RemoveContact.php?id={$message['id']}'>Remove</a>
-                                        <a href = 'ViewContact.php?id={$message['id']}'>View</a>
+                                        <a href = 'RemoveContact.php?id={$message['id']}' class='iconlink'><i class='far fa-trash-alt'></i></a>
+                                        <a href = 'ViewContact.php?id={$message['id']}' class='iconlink'><i class='far fa-eye'></i></a>
                                         </td>
                                     </tr>
                                 ";
