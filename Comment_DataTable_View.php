@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang = "fa">
     <head>
-        <title>جدول کاربران</title>
+        <title>جدول کامنت ها</title>
         <meta charset = "utf-8">
         <link rel = "stylesheet" href = "Style.css" type = "text/css">
         <style>
@@ -15,7 +15,7 @@
         <?php include 'Header.php'; ?>
         <?php include 'AsideNav.php'; ?>
         <main>
-            <h1>جدول اطلاعات کاربران</h1>
+            <h1>جدول کامنت های کاربران</h1>
             <div class="div-datatable">
                 <table class = "datatable">
                     <tr>
@@ -23,51 +23,42 @@
                             کد
                         </th>
                         <th>
-                            نام
+                            نام کاربر
                         </th>
                         <th>
-                            نام خانوادگی
+                            محصول
                         </th>
                         <th>
                             وضعیت
-                        </th>
-                        <th>
-                            ایمیل
-                        </th>
-                        <th>
-                            شماره تماس
                         </th>
                         <th>
                             عملیات
                         </th>
                     </tr>
                     <?php
-                        foreach($userdatatable as $user)
+                        foreach($commentdatatable as $comment)
                             {
                                 echo "
                                     <tr>
                                         <td class = 'table-number'>
-                                            {$user['id']}
+                                            {$comment['id']}
                                         </td>
                                         <td>
-                                            {$user['firstname']}
+                                            {$comment['username']}
                                         </td>
                                         <td>
-                                            {$user['lastname']}
+                                            {$comment['productid']}
                                         </td>
                                         <td>
-                                            {$user['role']}
+                                            {$comment['confirmation']}
                                         </td>
                                         <td>
-                                            {$user['email']}
-                                        </td>
-                                        <td class = 'table-number'>
-                                            {$user['number']}
-                                        </td>
-                                        <td>
-                                        <a href = 'EditProfile_Admin.php?id={$user['id']}' class='iconlink'><i class='far fa-edit'></i></a>
-                                        <a href = 'RemoveUser.php?id={$user['id']}' class='iconlink'><i class='far fa-trash-alt'></i></a>
-                                        <a href = 'ViewProfile_Admin.php?id={$user['id']}' class='iconlink'><i class='far fa-eye'></i></a>
+                                        <a href = 'RemoveComment.php?id={$comment['id']}' class='iconlink'>
+                                            <i class='far fa-trash-alt'></i>
+                                        </a>
+                                        <a href = 'EditComment.php?id={$comment['id']}' class='iconlink'>
+                                            <i class='far fa-eye'></i>
+                                        </a>
                                         </td>
                                     </tr>
                                 ";

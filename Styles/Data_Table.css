@@ -1,0 +1,31 @@
+.datatable{
+    border: 1px solid;
+    border-radius: 4px;
+    border-collapse: collapse;
+    width: 100%;
+    overflow-wrap:break-word;
+    background-color: var(--surface);
+    color: var(--on_surface);
+}
+.div-datatable{
+    max-width: 100%;
+    overflow: auto;
+}
+.datatable td{
+    border-bottom: 1px solid;
+    padding: 8px 16px;
+}
+.datatable th{
+    border-bottom: 1px solid;
+    padding: 8px 16px;
+}
+.datatable tr{
+    height: 52px;
+    max-height: 52px;
+}
+.datatable tr:first-child{
+    height: 56px;
+}
+.table-number{
+    text-align: left;
+}

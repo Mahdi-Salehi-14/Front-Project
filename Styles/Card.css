@@ -1,0 +1,54 @@
+.card{
+    background-color: var(--surface);
+    border: solid;
+    border-width: 1px;
+    border-color: var(--outline);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.card a{
+    color: var(--on_surface);
+    text-decoration: none;
+}
+.card-body{
+    padding: 16px;
+}
+.card-grid-3{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 8px;
+}
+.card-grid-4{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 8px;
+}
+.card img{
+    border-radius: 4px;
+}
+.cardbottomlink{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.cardbottomlink a{
+    color: var(--on_surface);
+    text-decoration: none;
+}
+.card-iconlink{
+    font-size: 2em;
+    background-color: var(--surface);
+    border: none;
+    height: 40px;
+    padding: 0px 24px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 2em;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+}
+.card-iconlink:hover{
+    background-color: var(--secondary_container);
+    border: none;
+    border-width: 0;
+}

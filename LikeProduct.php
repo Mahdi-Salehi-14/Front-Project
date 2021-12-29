@@ -3,7 +3,6 @@
     include 'DataBase.php';
     include 'Settings.php';
     include 'Security.php';
-    include 'AddProduct_View.php';
     $pid = $_GET['id'];
     $uid = Authentication :: uid();
     $db = new db($dbhost, $dbuser, $dbpass, $dbname);
@@ -14,12 +13,13 @@
     if(isset($like['id'])){
         $sql = "DELETE FROM like_product WHERE id = ?";
         $result = $db -> query($sql, $like['id']);
+        echo 'dislike';
     }
     else{
         $sql = "INSERT INTO like_product (userid, productid)
                 VALUES (?, ?)";
         $result = $db -> query($sql, $uid, $pid);
+        echo 'like';
     }
     $db -> close();
-    echo 'Done';
 ?>

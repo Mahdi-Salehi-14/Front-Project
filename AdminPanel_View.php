@@ -14,7 +14,9 @@
         <?php include 'Header.php'; ?>
         <?php include 'AsideNav.php'; ?>
         <main>
-            <h1>پنل داشبورد</h1>
+            <div class="out-box">
+                <h1>پنل داشبورد</h1>
+            </div>
         </main>
         <?php include 'Footer.php'; ?>
     </body>

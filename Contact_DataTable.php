@@ -17,5 +17,5 @@
     $messagedatatable = $result -> fetchAll();
     include 'Contact_DataTable_View.php';
     $db -> close();
-}
+    }
 ?>

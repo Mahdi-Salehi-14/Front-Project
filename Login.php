@@ -4,7 +4,11 @@ include 'DataBase.php';
 include 'Settings.php';
 include 'Security.php';
 $db = new db($dbhost, $dbuser, $dbpass, $dbname);
-if(isset($_POST['submit'])){
+if(isset($_SESSION['uid'])){
+    header('Location: ViewProfile.php');
+    exit;
+}
+else if(isset($_POST['submit'])){
     $sql = "SELECT * FROM user WHERE email = ?";
     $result = $db -> query($sql, $_POST['email']);
     $user = $result -> fetchArray();

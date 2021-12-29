@@ -32,9 +32,6 @@
                             شماره تماس
                         </th>
                         <th>
-                            متن پیام
-                        </th>
-                        <th>
                             عملیات
                         </th>
                     </tr>
@@ -54,9 +51,6 @@
                                         </td>
                                         <td class = 'table-number'>
                                             {$message['number']}
-                                        </td>
-                                        <td>
-                                            {$message['textarea']}
                                         </td>
                                         <td>
                                         <a href = 'RemoveContact.php?id={$message['id']}' class='iconlink'><i class='far fa-trash-alt'></i></a>

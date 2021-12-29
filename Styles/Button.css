@@ -1,0 +1,13 @@
+.btn{
+    background-color: var(--primary);
+    color: var(--on_primary);
+    border: none;
+    min-width: 64px;
+    height: 40px;
+    padding: 0 24px;
+    margin:	8px 0px 0px 8px;
+    border-radius: 2em;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}

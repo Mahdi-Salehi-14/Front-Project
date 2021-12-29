@@ -1,0 +1,24 @@
+.input-text{
+    height: 44px;
+    width: 200px;
+    padding: 16px;
+    border: solid;
+    border-color: var(--on_surface);
+    border-width: 1px;
+    border-radius: 4px;
+    margin: 8px 0;
+    background-color: var(--surface);
+    color: var(--on_surface);
+}
+.input-textarea{
+    height: 128px;
+    width: 100%;
+    padding: 16px;
+    border: solid;
+    border-color: var(--on_surface);
+    border-width: 1px;
+    border-radius: 4px;
+    margin: 8px auto;
+    background-color: var(--surface);
+    color: var(--on_surface);
+}

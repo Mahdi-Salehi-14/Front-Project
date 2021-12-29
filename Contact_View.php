@@ -13,26 +13,30 @@
     <body class = "body-grid-no-aside">
         <?php include 'Header.php'; ?>
         <main>
-            <h1>تماس با ما</h1>
-            <form action="" method="post">
-                <label for="title">عنوان:</label>
-                <br>
-                <input type="text" id="title" name="title">
-                <br>
-                <label for="email">آدرس ایمیل شما:</label>
-                <br>
-                <input type="email" id="email" name="email" placeholder="ABC@Gmail.com">
-                <br>
-                <label for="number">شماره موبایل شما:</label>
-                <br>
-                <input type="number" id="number" name="number" placeholder="09123456789">
-                <br>
-                <label for="textarea">متن پیام:</label>
-                <br>
-                <textarea id="textarea" name="textarea"></textarea>
-                <br>
-                <button type="submit" name="submit">ارسال</button>
-            </form>
+            <div class="out-box">
+                <h1>تماس با ما</h1>
+                <div class="inner-box">
+                    <form action="" method="post">
+                        <label for="title">عنوان:</label>
+                        <br>
+                        <input class="input-text" type="text" id="title" name="title">
+                        <br>
+                        <label for="email">آدرس ایمیل شما:</label>
+                        <br>
+                        <input class="input-text" type="email" id="email" name="email" placeholder="ABC@Gmail.com">
+                        <br>
+                        <label for="number">شماره موبایل شما:</label>
+                        <br>
+                        <input class="input-text" type="number" id="number" name="number" placeholder="09123456789">
+                        <br>
+                        <label for="textarea">متن پیام:</label>
+                        <br>
+                        <textarea class="input-textarea" id="textarea" name="textarea"></textarea>
+                        <br>
+                        <button type="submit" name="submit" class="btn">ارسال</button>
+                    </form>
+                </div>
+            </div>
         </main>
         <?php include 'Footer.php'; ?>
     </body>

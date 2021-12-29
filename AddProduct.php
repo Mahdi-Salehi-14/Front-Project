@@ -3,14 +3,20 @@
     include 'DataBase.php';
     include 'Settings.php';
     include 'Security.php';
-    include 'AddProduct_View.php';
+    
     $db = new db($dbhost, $dbuser, $dbpass, $dbname);
-    $sql = "SELECT * FROM user WHERE id = ?";
-    $result = $db -> query($sql, $_SESSION['uid']);
-    $user = $result -> fetchArray();
-    if($user['role'] != 'adminuser'){
-        header('Location: 403.php');
-        exit;
+
+    if(isset($_SESSION['uid'])){
+        $sql = "SELECT * FROM user WHERE id = ?";
+        $result = $db -> query($sql, $_SESSION['uid']);
+        $user = $result -> fetchArray();
+        if($user['role'] != 'adminuser'){
+            header('Location: 403.php');
+            exit;
+            }
+    
+    include 'AddProduct_View.php';
+    
     }
     else{
         if(isset($_POST['submit'])){

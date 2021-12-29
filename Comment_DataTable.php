@@ -12,10 +12,10 @@
         exit;
     }
     else{
-    $sql = "SELECT * FROM message WHERE id = ?";
-    $result = $db -> query($sql, $_GET['id']);
-    $message = $result -> fetchArray();
-    include 'ViewContact_View.php';
-    $db -> close();
+        $sql = "SELECT * FROM comment";
+        $result = $db -> query($sql);
+        $commentdatatable = $result -> fetchAll();
+        include 'Comment_DataTable_View.php';
+        $db -> close();
     }
 ?>
