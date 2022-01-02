@@ -5,11 +5,6 @@
         <meta charset = "utf-8">
         <link rel = "stylesheet" href = "Style.css" type = "text/css">
         <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
-        <style>
-            :lang(fa){
-            direction: rtl;
-            }
-        </style>
         <script src="https://kit.fontawesome.com/766647deb5.js" crossorigin="anonymous"></script>
     </head>
     <body class = "body-grid-no-aside">
@@ -33,6 +28,8 @@
                     <?php
                         foreach($productlistcheapest as $product)
                             {
+                                include 'CardLike.php';
+                                include 'CardBookmark.php';
                                 echo "
                                     <article class = 'card'>
                                         <a href = 'ViewProduct.php?id={$product['id']}'>
@@ -42,10 +39,10 @@
                                         <div class = 'card-body'>
                                         <div class='cardbottomlink'>
                                             <a href='LikeProduct.php?id={$product['id']}' class='card-iconlink'>
-                                                <i class='far fa-heart'></i>
+                                                <i class='{$lfa} fa-heart'></i>
                                             </a>
                                             <a href='BookmarkProduct.php?id={$product['id']}' class='card-iconlink'>
-                                                <i class='far fa-bookmark'></i>
+                                                <i class='{$bfa} fa-bookmark'></i>
                                             </a>
                                         </div>
                                             <h3><a href = 'ViewProduct.php?id={$product['id']}'>{$product['productname']}</a></h3>
@@ -61,6 +58,8 @@
                     <?php
                         foreach($productlistpopular as $product)
                             {
+                                include 'CardLike.php';
+                                include 'CardBookmark.php';
                                 echo "
                                     <article class = 'card'>
                                         <a href = 'ViewProduct.php?id={$product['id']}'>
@@ -70,10 +69,10 @@
                                         <div class = 'card-body'>
                                         <div class='cardbottomlink'>
                                             <a href='LikeProduct.php?id={$product['id']}' class='card-iconlink'>
-                                                <i class='far fa-heart'></i>
+                                                <i class='{$lfa} fa-heart'></i>
                                             </a>
                                             <a href='BookmarkProduct.php?id={$product['id']}' class='card-iconlink'>
-                                                <i class='far fa-bookmark'></i>
+                                                <i class='{$bfa} fa-bookmark'></i>
                                             </a>
                                         </div>
                                             <h3><a href = 'ViewProduct.php?id={$product['id']}'>{$product['productname']}</a></h3>

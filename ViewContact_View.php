@@ -4,11 +4,6 @@
         <title>پیام</title>
         <meta charset="utf-8">
         <link rel = "stylesheet" href = "Style.css">
-        <style>
-            :lang(fa){
-            direction: rtl;
-            }
-        </style>
     </head>
     <body class = "body-grid">
         <?php include 'Header.php'; ?>

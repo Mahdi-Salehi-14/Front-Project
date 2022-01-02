@@ -4,11 +4,6 @@
         <title>مشاهده کامنت</title>
         <meta charset="utf-8">
         <link rel = "stylesheet" href = "Style.css">
-        <style>
-            :lang(fa){
-            direction: rtl;
-            }
-        </style>
     </head>
     <body class = "body-grid">
         <?php include 'Header.php'; ?>
@@ -20,17 +15,17 @@
                     <form action="" method="post">
                         <label for="username">نام کاربر :</label>
                         <br>
-                        <input class="input-text" type="text" id="username" name="username" value = "<?php echo $username; ?>">
+                        <input class="input-text" type="text" id="username" name="username" value = "<?php echo $username; ?>" required>
                         <br>
                         <label for="productid">آی دی محصول مورد نظر :</label>
                         <br>
-                        <input class="input-text" type="text" id="productid" name="productid" value = "<?php echo $productid; ?>">
+                        <input class="input-text" type="text" id="productid" name="productid" value = "<?php echo $productid; ?>" required>
                         <br>
                         <a href='ViewProduct.php?id=<?php echo $productid; ?>'>مشاهده محصول مورد مظر</a>
                         <br>
                         <label for="commenttext">دیدگاه کاربر :</label>
                         <br>
-                        <textarea class="input-textarea" id="commenttext" name="commenttext"><?php echo $commenttext; ?></textarea>
+                        <textarea class="input-textarea" id="commenttext" name="commenttext" required><?php echo $commenttext; ?></textarea>
                         <br>
                         <label for="confirmed">تایید شده</label>
                         <input type="radio" name="confirmation" value="confirmed" id="confirmed" <?php if($confirmation == 'confirmed') {echo 'checked';} ?>>

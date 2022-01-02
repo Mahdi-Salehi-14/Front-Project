@@ -4,11 +4,6 @@
         <title>پروفایل کاربر</title>
         <meta charset="utf-8">
         <link rel = "stylesheet" href = "Style.css">
-        <style>
-            :lang(fa){
-            direction: rtl;
-            }
-        </style>
     </head>
     <body class = "body-grid">
         <?php include 'Header.php'; ?>
@@ -43,6 +38,19 @@
                     <hr>
                     <div class="record">
                         <p>وضعیت : </p><p><?php if($user['role'] == 'adminuser') {echo 'کاربر ادمین';} else if($user['role'] == 'normaluser') {echo 'کاربر عادی';} else {echo 'کاربر مسدود';} ?></p>
+                    </div>
+                </div>
+                <div class="inner-box">
+                    <div class="record">
+                        <p>تعداد سفارش های کاربر : </p><p><?php echo "{$ordercount}"; ?></p>
+                    </div>
+                    <hr>
+                    <div class="record">
+                        <p>تعداد محصولاتی که کاربر لایک کرده است : </p><p><?php echo "{$likecount}"; ?></p>
+                    </div>
+                    <hr>
+                    <div class="record">
+                    <p>تعداد محصولاتی که کاربر بوکمارک کرده است : </p><p><?php echo "{$bookmarkcount}"; ?></p>
                     </div>
                 </div>
             </div>

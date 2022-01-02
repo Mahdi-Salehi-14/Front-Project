@@ -4,11 +4,6 @@
         <title>حساب کاربری</title>
         <meta charset="utf-8">
         <link rel = "stylesheet" href = "Style.css">
-        <style>
-            :lang(fa){
-            direction: rtl;
-            }
-        </style>
     </head>
     <body class = "body-grid">
         <?php include 'Header.php'; ?>
@@ -39,6 +34,19 @@
                     <hr>
                     <div class="record">
                         <p>شماره تماس : </p><p><?php echo "{$user['number']}"; ?></p>
+                    </div>
+                </div>
+                <div class="inner-box">
+                    <div class="record">
+                        <p>تعداد سفارش های شما : </p><p><?php echo "{$ordercount}"; ?></p>
+                    </div>
+                    <hr>
+                    <div class="record">
+                        <p>تعداد محصولاتی که لایک کردید : </p><p><?php echo "{$likecount}"; ?></p>
+                    </div>
+                    <hr>
+                    <div class="record">
+                    <p>تعداد محصولاتی که بوکمارک کردید : </p><p><?php echo "{$bookmarkcount}"; ?></p>
                     </div>
                 </div>
             </div>

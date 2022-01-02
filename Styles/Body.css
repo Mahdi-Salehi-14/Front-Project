@@ -15,10 +15,24 @@ header, footer, aside, main{
     background-color: var(--surface);
     border-radius: 4px;
 }
+.footer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.out-footer-list, .inner-footer-list{
+    list-style-type: none;
+}
+.first-list-item{
+    font-size: 18px;
+}
+.inner-box-footer{
+    margin: 8px 0;
+    text-align: right;
+}
 .aside-nav ul, .header-nav ul{
     list-style-type: none;
 }
-.aside-nav a, .header-nav a{
+.aside-nav a, .header-nav a, .inner-footer-list a{
     color: var(--on_secondary_container);
     text-decoration: none;
 }
@@ -61,6 +75,12 @@ header, footer, aside, main{
     border: none;
     border-width: 0;
 }
+.right-header-nav a:first-child{
+    margin-right: 0;
+}
+.login-nav a:last-child{
+    margin-left: 0;
+}
 .header-nav li{
     display: inline-block;
 }
@@ -100,7 +120,7 @@ header, footer, aside, main{
     margin: 8px auto;
     padding: 16px;
     border: solid;
-    border-color: var(--on_surface);
+    border-color: var(--outline);
     border-width: 1px;
     border-radius: 8px;
 }
@@ -109,7 +129,7 @@ header, footer, aside, main{
     margin: 8px auto;
     padding: 16px;
     border: solid;
-    border-color: var(--on_surface);
+    border-color: var(--outline);
     border-width: 1px;
     border-radius: 8px;
     display: grid;
@@ -124,12 +144,20 @@ header, footer, aside, main{
 .inner-box-product-detail p{
     font-size: 1.4em;
 }
-.inner-box-product-comment{
+.inner-box-product-comment, .inner-box-product-suggestion, .inner-box-product-purchase, .inner-box-send-ticket{
     max-width: 1250px;
     margin: 8px auto;
     padding: 16px;
     border: solid;
-    border-color: var(--on_surface);
+    border-color: var(--outline);
+    border-width: 1px;
+    border-radius: 8px;
+}
+.inner-box-ticket{
+    max-width: 1250px;
+    margin: 8px auto;
+    border: solid;
+    border-color: var(--outline);
     border-width: 1px;
     border-radius: 8px;
 }

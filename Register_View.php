@@ -4,11 +4,6 @@
         <title>ثبت نام</title>
         <meta charset="utf-8">
         <link rel = "stylesheet" href = "Style.css">
-        <style>
-            :lang(fa){
-            direction: rtl;
-            }
-        </style>
     </head>
     <body class = "body-grid-no-aside">
         <?php include 'Header.php'; ?>
@@ -20,32 +15,35 @@
                     <form action="" method="post">
                         <label for="firstname">نام :</label>
                         <br>
-                        <input class="input-text" type="text" id="firstname" name="firstname">
+                        <input class="input-text" type="text" id="firstname" name="firstname" required>
                         <br>
                         <label for="lastname">فامیل :</label>
                         <br>
-                        <input class="input-text" type="text" id="lastname" name="lastname">
+                        <input class="input-text" type="text" id="lastname" name="lastname" required>
                         <br>
+                        <label>جنسیت :</label>
+                        <br>
+                        <input type="radio" name="gender" value="male" id="malegender">
                         <label for="malegender">مذکر</label>
-                        <input type="radio" name="gender" value="male" checked id="malegender">
-                        <label for="femalegender">مونث</label>
+                        <br>
                         <input type="radio" name="gender" value="female" checked id="femalegender">
+                        <label for="femalegender">مونث</label>
                         <br>
                         <label for="kodmeli">کد ملی :</label>
                         <br>
-                        <input class="input-text" type="number" id="kodmeli" name="kodmeli" placeholder="1234567890">
+                        <input class="input-text" type="number" id="kodmeli" name="kodmeli" placeholder="1234567890" required>
                         <br>
                         <label for="email">آدرس ایمیل :</label>
                         <br>
-                        <input class="input-text" type="email" id="email" name="email" placeholder="ABC@Gmail.com">
+                        <input class="input-text" type="email" id="email" name="email" placeholder="ABC@Gmail.com" required>
                         <br>
                         <label for="number">شماره موبایل :</label>
                         <br>
-                        <input class="input-text" type="number" id="number" name="number" placeholder="09123456789">
+                        <input class="input-text" type="number" id="number" name="number" placeholder="09123456789" required>
                         <br>
                         <label for="password">کلمه عبور :</label>
                         <br>
-                        <input class="input-text" type="password" id="password" name="password">
+                        <input class="input-text" type="password" id="password" name="password" required>
                         <br>
                         <input type="hidden" id="role" name="role" value="normaluser">
                         <button type="submit" name="submit" class="btn">ثبت نام</button>

@@ -4,6 +4,8 @@
         <title>ورود</title>
         <meta charset="utf-8">
         <link rel = "stylesheet" href = "Style.css">
+        
+        <script src="https://kit.fontawesome.com/766647deb5.js" crossorigin="anonymous"></script>
     </head>
     <body class = "body-grid-no-aside">
         <?php include 'Header.php'; ?>
@@ -14,11 +16,11 @@
                     <form action="" method="post">
                         <label for="email">آدرس ایمیل :</label>
                         <br>
-                        <input class="input-text" type="email" id="email" name="email" placeholder="ABC@Gmail.com">
+                        <input class="input-text" type="email" id="email" name="email" placeholder="ABC@Gmail.com" required>
                         <br>
                         <label for="password">کلمه عبور خور را وارد کنید :</label>
                         <br>
-                        <input class="input-text" type="password" id="password" name="password">
+                        <input class="input-text" type="password" id="password" name="password" required>
                         <br>
                         <button type="submit" name = "submit" class="btn">ورود به حساب</button>
                     </form>

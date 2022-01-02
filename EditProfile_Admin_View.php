@@ -4,11 +4,6 @@
         <title>ویرایش اطلاعات</title>
         <meta charset="utf-8">
         <link rel = "stylesheet" href = "Style.css">
-        <style>
-            :lang(fa){
-            direction: rtl;
-            }
-        </style>
     </head>
     <body class = "body-grid">
         <?php include 'Header.php'; ?>
@@ -20,41 +15,46 @@
                     <form action = "" method="post">
                         <label for="firstname">نام :</label>
                         <br>
-                        <input class="input-text" type="text" id="firstname" name="firstname" value = "<?php echo $firstname; ?>">
+                        <input class="input-text" type="text" id="firstname" name="firstname" value = "<?php echo $firstname; ?>" required>
                         <br>
                         <label for="lastname">فامیل :</label>
                         <br>
-                        <input class="input-text" type="text" id="lastname" name="lastname" value = "<?php echo $lastname; ?>">
+                        <input class="input-text" type="text" id="lastname" name="lastname" value = "<?php echo $lastname; ?>" required>
                         <br>
-                        <label for="malegender">مذکر</label>
+                        <label>چنسیت :</label>
+                        <br>
                         <input type="radio" name="gender" value="male" id="malegender" <?php if($gender == 'male') {echo 'checked';} ?>>
-                        <label for="femalegender">مونث</label>
+                        <label for="malegender">مذکر</label>
+                        <br>
                         <input type="radio" name="gender" value="female" id="femalegender" <?php if($gender == 'female') {echo 'checked';} ?>>
+                        <label for="femalegender">مونث</label>
                         <br>
                         <label for="kodmeli">کد ملی :</label>
                         <br>
-                        <input class="input-text" type="number" id="number" name="kodmeli" placeholder="1234567890" value = "<?php echo $kodmeli; ?>">
+                        <input class="input-text" type="number" id="number" name="kodmeli" placeholder="1234567890" value = "<?php echo $kodmeli; ?>" required>
                         <br>
                         <label for="email">آدرس ایمیل :</label>
                         <br>
-                        <input class="input-text" type="email" id="email" name="email" placeholder="ABC@Gmail.com" value = "<?php echo $email; ?>">
+                        <input class="input-text" type="email" id="email" name="email" placeholder="ABC@Gmail.com" value = "<?php echo $email; ?>" required>
                         <br>
                         <label for="number">شماره موبایل :</label>
                         <br>
-                        <input class="input-text" type="number" id="number" name="number" placeholder="09123456789" value = "<?php echo $number; ?>">
+                        <input class="input-text" type="number" id="number" name="number" placeholder="09123456789" value = "<?php echo $number; ?>" required>
                         <br>
                         <label for="password">کلمه عبور جدید :</label>
                         <br>
-                        <input class="input-text" type="password" id="password" name="password" value = "<?php echo $password; ?>">
+                        <input class="input-text" type="password" id="password" name="password" value = "<?php echo $password; ?>" required>
                         <br>
                         <label>تعیین نوع کاربر :</label>
                         <br>
-                        <label for="adminuser">کاربر ادمین</label>
                         <input type="radio" name="role" value="adminuser" id="adminuser" <?php if($role == 'adminuser') {echo 'checked';} ?>>
-                        <label for="normaluser">کاربر عادی</label>
+                        <label for="adminuser">کاربر ادمین</label>
+                        <br>
                         <input type="radio" name="role" value="normaluser" id="normaluser" <?php if($role == 'normaluser') {echo 'checked';} ?>>
-                        <label for="blockuser">کاربر مسدود</label>
+                        <label for="normaluser">کاربر عادی</label>
+                        <br>
                         <input type="radio" name="role" value="blockuser" id="blockuser" <?php if($role == 'blockuser') {echo 'checked';} ?>>
+                        <label for="blockuser">کاربر مسدود</label>
                         <br>
                         <button type="submit" name="submit" class="btn">ذخیره اطلاعات</button>
                     </form>

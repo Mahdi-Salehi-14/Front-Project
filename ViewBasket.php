@@ -14,7 +14,7 @@
         $user = $result -> fetchArray();
         }
 
-    $sql = "SELECT * FROM product_basket WHERE userid = ?";
+    $sql = "SELECT * FROM product_basket WHERE userid = ? AND basketstatus = 'notcompleted'";
     $result = $db -> query($sql, $uid);
     $basket = $result -> fetchAll();
 

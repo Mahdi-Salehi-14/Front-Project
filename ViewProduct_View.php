@@ -25,11 +25,11 @@
                         <p>توضیحات : </p><p><?php echo"{$product['productdescription']}"; ?></p>
                         <hr>
                         <div class='cardbottomlink'>
-                            <a href='LikeProduct.php?id={$product['id']}' class='card-iconlink'>
-                                <i class='far fa-heart'></i>
+                            <a href='LikeProduct.php?id=<?php echo"{$product['id']}"; ?>' class='card-iconlink'>
+                                <i class='<?php if(isset($productlike['id'])){if($productlike['likestatus'] == 'like'){echo 'fas';} else{echo 'far';}} else{echo 'far';} ?> fa-heart'></i>
                             </a>
-                            <a href='BookmarkProduct.php?id={$product['id']}' class='card-iconlink'>
-                                <i class='far fa-bookmark'></i>
+                            <a href='BookmarkProduct.php?id=<?php echo"{$product['id']}"; ?>' class='card-iconlink'>
+                                <i class='<?php if(isset($bookmarklike['id'])){if($bookmarklike['bookmarkstatus'] == 'bookmark-on'){echo 'fas';} else{echo 'far';}} else{echo 'far';} ?> fa-bookmark'></i>
                             </a>
                         </div>
                         <hr>
@@ -38,10 +38,45 @@
                                 <label for="productnumber">تعداد :</label>
                                 <br>
                                 <input class="input-text" type="number" id="productnumber" name="productnumber" value="1">
+                                <input type='hidden' id='basketstatus' name='basketstatus' value='notcompleted'>
                                 <br>
                                 <button type="submit" name="submit" class="btn">افزودن به سبد خرید</button>
                             </form>
                         </div>
+                    </div>
+                </div>
+                <div class="inner-box-product-suggestion">
+                    <h2>محصولات پیشنهادی</h2>
+                    <div class="card-grid-4">
+                        <?php
+                            foreach($suggestion as $product)
+                                {
+                                    if($product['id'] != $_GET['id']){
+                                        include 'CardLike.php';
+                                        include 'CardBookmark.php';
+                                        echo "
+                                            <article class = 'card'>
+                                                <a href = 'ViewProduct.php?id={$product['id']}'>
+                                                    <img src = '{$product['productimg']}'>
+                                                </a>
+                                                <br>
+                                                <div class = 'card-body'>
+                                                <div class='cardbottomlink'>
+                                                    <a href='LikeProduct.php?id={$product['id']}' class='card-iconlink'>
+                                                        <i class='{$lfa} fa-heart'></i>
+                                                    </a>
+                                                    <a href='BookmarkProduct.php?id={$product['id']}' class='card-iconlink'>
+                                                        <i class='{$bfa} fa-bookmark'></i>
+                                                    </a>
+                                                </div>
+                                                    <h3><a href = 'ViewProduct.php?id={$product['id']}'>{$product['productname']}</a></h3>
+                                                    <p>قیمت :{$product['productprice']}</p>
+                                                </div>
+                                            </article>
+                                        ";
+                                    }
+                                }
+                        ?>
                     </div>
                 </div>
                 <div class="inner-box-product-comment">
@@ -49,11 +84,11 @@
                     <form action="AddComment.php" method="post">
                         <label for="username">نام :</label>
                         <br>
-                        <input class="input-text" type="text" id="username" name="username">
+                        <input class="input-text" type="text" id="username" name="username" required>
                         <br>
                         <label for="commenttext">دیدگاه :</label>
                         <br>
-                        <textarea class="input-textarea" id="commenttext" name="commenttext"></textarea>
+                        <textarea class="input-textarea" id="commenttext" name="commenttext" required></textarea>
                         <br>
                         <input type="hidden" id="productid" name="productid" value='<?php echo"{$product['id']}"; ?>'>
                         <input type="hidden" id="confirmation" name="confirmation" value="unconfirmed">

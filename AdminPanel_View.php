@@ -4,11 +4,6 @@
         <title>داشبورد</title>
         <meta charset = "utf-8">
         <link rel = "stylesheet" href = "Style.css" type = "text/css">
-        <style>
-            :lang(fa){
-            direction: rtl;
-            }
-        </style>
     </head>
     <body class = "body-grid">
         <?php include 'Header.php'; ?>
@@ -16,6 +11,15 @@
         <main>
             <div class="out-box">
                 <h1>پنل داشبورد</h1>
+                <div class="inner-box">
+                    <div class="record">
+                        <p>تعداد بازدید های سایت : </p><p><?php echo "{$visitcount}"; ?></p>
+                    </div>
+                    <hr>
+                    <div class="record">
+                        <p>تعداد سفارش های کاربران : </p><p><?php echo "{$ordercount}"; ?></p>
+                    </div>
+                </div>
             </div>
         </main>
         <?php include 'Footer.php'; ?>

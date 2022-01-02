@@ -12,6 +12,27 @@ if($user['role'] != 'adminuser'){
     exit;
 }
 else{
+
+    $sql = "SELECT * FROM order_product";
+    $result = $db -> query($sql);
+    $order = $result -> fetchAll();
+
+    $ordercount = 0;
+
+    foreach($order as $order_product){
+        $ordercount = $ordercount + 1;
+    }
+
+    $sql = "SELECT * FROM site_visit";
+    $result = $db -> query($sql);
+    $visit = $result -> fetchAll();
+
+    $visitcount = 0;
+
+    foreach($visit as $site_visit){
+        $visitcount = $visitcount + 1;
+    }
+
     include 'AdminPanel_View.php';
 }
 ?>

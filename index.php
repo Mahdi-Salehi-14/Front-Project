@@ -18,6 +18,10 @@
     $sql = "SELECT * FROM product ORDER BY productprice DESC LIMIT 4";
     $result = $db -> query($sql);
     $productlistpopular = $result -> fetchAll();
+
+    $sql = "INSERT INTO site_visit () VALUES ()";
+    $result = $db -> query($sql);
+
     include 'index_View.php';
     $db -> close();
 ?>

@@ -1,9 +1,8 @@
 <header>
-    <nav class = "header-nav">
-        <ul>
+    <nav class = "header-nav out-box">
+        <ul class="right-header-nav">
             <li><a href = "index.php">خانه</a></li>
             <li><a href = "ProductList.php">محصولات</a></li>
-            <li><a href = "Contact.php">تماس با ما</a></li>
         </ul>
         <ul class="login-nav">
             <?php if(isset($_SESSION['uid']) && $user['role'] == 'adminuser') {echo '<li><a href = "AdminPanel.php">پنل ادمین</a></li>';} ?>

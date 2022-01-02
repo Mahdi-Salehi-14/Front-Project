@@ -15,6 +15,20 @@
     $result = $db -> query($sql, $_GET['id']);
     $product = $result -> fetchArray();
 
+    if(isset($_SESSION['uid'])){
+        $sql = "SELECT * FROM like_product WHERE userid = ? AND productid = ?";
+        $result = $db -> query($sql, $_SESSION['uid'], $_GET['id']);
+        $productlike = $result -> fetchArray();
+
+        $sql = "SELECT * FROM bookmark_product WHERE userid = ? AND productid = ?";
+        $result = $db -> query($sql, $_SESSION['uid'], $_GET['id']);
+        $bookmarklike = $result -> fetchArray();
+    }
+
+    $sql = "SELECT * FROM product WHERE category = ? OR brand = ? AND id != ? LIMIT 5";
+    $result = $db -> query($sql, $product['category'], $product['brand'], $product['id']);
+    $suggestion = $result -> fetchAll();
+
     $sql = "SELECT * FROM comment WHERE productid = ? AND confirmation = 'confirmed'";
     $result = $db -> query($sql, $_GET['id']);
     $productcomment = $result -> fetchAll();

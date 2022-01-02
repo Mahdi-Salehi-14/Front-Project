@@ -4,11 +4,6 @@
         <title>تماس با ما</title>
         <meta charset="utf-8">
         <link rel = "stylesheet" href = "Style.css">
-        <style>
-            :lang(fa){
-            direction: rtl;
-            }
-        </style>
     </head>
     <body class = "body-grid-no-aside">
         <?php include 'Header.php'; ?>
@@ -19,19 +14,19 @@
                     <form action="" method="post">
                         <label for="title">عنوان:</label>
                         <br>
-                        <input class="input-text" type="text" id="title" name="title">
+                        <input class="input-text" type="text" id="title" name="title" required>
                         <br>
                         <label for="email">آدرس ایمیل شما:</label>
                         <br>
-                        <input class="input-text" type="email" id="email" name="email" placeholder="ABC@Gmail.com">
+                        <input class="input-text" type="email" id="email" name="email" placeholder="ABC@Gmail.com" required>
                         <br>
                         <label for="number">شماره موبایل شما:</label>
                         <br>
-                        <input class="input-text" type="number" id="number" name="number" placeholder="09123456789">
+                        <input class="input-text" type="number" id="number" name="number" placeholder="09123456789" required>
                         <br>
                         <label for="textarea">متن پیام:</label>
                         <br>
-                        <textarea class="input-textarea" id="textarea" name="textarea"></textarea>
+                        <textarea class="input-textarea" id="textarea" name="textarea" required></textarea>
                         <br>
                         <button type="submit" name="submit" class="btn">ارسال</button>
                     </form>

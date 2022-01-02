@@ -4,11 +4,6 @@
         <title>ورود اطلاعات محصول</title>
         <meta charset="utf-8">
         <link rel = "stylesheet" href = "Style.css">
-        <style>
-            :lang(fa){
-            direction: rtl;
-            }
-        </style>
     </head>
     <body class = "body-grid">
         <?php include 'Header.php'; ?>
@@ -20,19 +15,19 @@
                     <form action="" method="post">
                         <label for="producttitle">عنوان محصول :</label>
                         <br>
-                        <input class="input-text" type="text" id="producttitle" name="producttitle">
+                        <input class="input-text" type="text" id="producttitle" name="producttitle" required>
                         <br>
                         <label for="productname">نام محصول :</label>
                         <br>
-                        <input class="input-text" type="text" id="productname" name="productname">
+                        <input class="input-text" type="text" id="productname" name="productname" required>
                         <br>
                         <label for="productdescription">توضیحات محصول :</label>
                         <br>
-                        <textarea class="input-textarea" id="productdescription" name="productdescription"></textarea>
+                        <textarea class="input-textarea" id="productdescription" name="productdescription" required></textarea>
                         <br>
                         <label for="productcode">کد محصول :</label>
                         <br>
-                        <input class="input-text" type="number" id="productcode" name="productcode">
+                        <input class="input-text" type="number" id="productcode" name="productcode" required>
                         <br>
                         <label>دسته محصول :</label>
                         <br>
@@ -54,7 +49,7 @@
                         <br>
                         <label for="productprice">قیمت محصول (قیمت ها به ریال وارد شوند) :</label>
                         <br>
-                        <input class="input-text" type="number" id="productprice" name="productprice">
+                        <input class="input-text" type="number" id="productprice" name="productprice" required>
                         <br>
                         <label>عکس جدید محصول :</label>
                         <br>

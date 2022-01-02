@@ -4,11 +4,6 @@
         <title>ویرایش اطلاعات محصول</title>
         <meta charset="utf-8">
         <link rel = "stylesheet" href = "Style.css">
-        <style>
-            :lang(fa){
-            direction: rtl;
-            }
-        </style>
     </head>
     <body class = "body-grid">
         <?php include 'Header.php'; ?>
@@ -20,19 +15,19 @@
                     <form action="" method="post">
                         <label for="producttitle">عنوان جدید محصول :</label>
                         <br>
-                        <input class="input-text" type="text" id="producttitle" name="producttitle" value = "<?php echo $producttitle; ?>">
+                        <input class="input-text" type="text" id="producttitle" name="producttitle" value = "<?php echo $producttitle; ?>" required>
                         <br>
                         <label for="productname">نام جدید محصول :</label>
                         <br>
-                        <input class="input-text" type="text" id="productname" name="productname" value = "<?php echo $productname; ?>">
+                        <input class="input-text" type="text" id="productname" name="productname" value = "<?php echo $productname; ?>" required>
                         <br>
                         <label for="productdescription">توضیحات جدید محصول :</label>
                         <br>
-                        <textarea class="input-textarea" id="productdescription" name="productdescription"><?php echo $productdescription; ?></textarea>
+                        <textarea class="input-textarea" id="productdescription" name="productdescription" required><?php echo $productdescription; ?></textarea>
                         <br>
                         <label for="productcode">کد جدید محصول :</label>
                         <br>
-                        <input class="input-text" type="number" id="productcode" name="productcode" value = "<?php echo $productcode; ?>">
+                        <input class="input-text" type="number" id="productcode" name="productcode" value = "<?php echo $productcode; ?>" required>
                         <br>
                         <label>دسته محصول :</label>
                         <br>
@@ -54,7 +49,7 @@
                         <br>
                         <label for="productprice">قیمت جدید محصول (قیمت ها به ریال وارد شوند) :</label>
                         <br>
-                        <input class="input-text" type="number" id="productprice" name="productprice" value = "<?php echo $productprice; ?>">
+                        <input class="input-text" type="number" id="productprice" name="productprice" value = "<?php echo $productprice; ?>" required>
                         <br>
                         <label>عکس جدید محصول :</label>
                         <br>
