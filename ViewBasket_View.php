@@ -50,11 +50,22 @@
                     ?>
                     <hr>
                     <div class="inner-box-product-purchase">
-                        <form action="Purchase.php" method="post">
-                            <label for='allsum'>قیمت کل : <?php echo "{$allsum}"; ?></label>
-                            <br>
-                            <button type='submit' name='submit' class='btn'>تکمیل فرایند خرید</button>
-                        </form>
+                        <?php
+                            if(isset($product_basket['id'])){
+                                echo"
+                                    <form action='Purchase.php' method='post'>
+                                        <label for='allsum'>قیمت کل : {$allsum}</label>
+                                        <br>
+                                        <button type='submit' name='submit' class='btn'>تکمیل فرایند خرید</button>
+                                    </form>
+                                ";
+                            }
+                            else{
+                                echo"
+                                    <p>سبد خرید شما خالی است</p>
+                                ";
+                            }
+                        ?>
                     </div>
             </div>
         </main>

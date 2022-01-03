@@ -7,6 +7,7 @@
 :root{
     background-color: var(--primary_container);
     font-family: IRANYekan,sans-serif;
+    scroll-behavior: smooth;
 }
 *{
     box-sizing: border-box;
@@ -35,4 +36,16 @@ img{
 .iconlink{
     color: var(--on_surface);
     text-decoration: none;
+}
+.go-top-div{
+    font-size: 3em;
+}
+.go-top-div a{
+    color: var(--on_surface);
+    text-decoration: none;
+}
+#go-top-a{
+    position: fixed;
+    bottom: 15px;
+    left: 20px;
 }

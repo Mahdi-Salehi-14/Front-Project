@@ -25,8 +25,8 @@
         $bookmarklike = $result -> fetchArray();
     }
 
-    $sql = "SELECT * FROM product WHERE category = ? OR brand = ? AND id != ? LIMIT 5";
-    $result = $db -> query($sql, $product['category'], $product['brand'], $product['id']);
+    $sql = "SELECT * FROM product WHERE category = ? OR brand = ? LIMIT 5";
+    $result = $db -> query($sql, $product['category'], $product['brand']);
     $suggestion = $result -> fetchAll();
 
     $sql = "SELECT * FROM comment WHERE productid = ? AND confirmation = 'confirmed'";

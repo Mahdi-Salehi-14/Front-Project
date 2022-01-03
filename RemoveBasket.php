@@ -3,6 +3,7 @@
     include 'DataBase.php';
     include 'Settings.php';
     include 'Security.php';
+    
     $bid = $_GET['id'];
     $db = new db($dbhost, $dbuser, $dbpass, $dbname);
     

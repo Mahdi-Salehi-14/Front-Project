@@ -4,6 +4,7 @@
         <title>ثبت نام</title>
         <meta charset="utf-8">
         <link rel = "stylesheet" href = "Style.css">
+        <script src="https://kit.fontawesome.com/766647deb5.js" crossorigin="anonymous"></script>
     </head>
     <body class = "body-grid-no-aside">
         <?php include 'Header.php'; ?>
